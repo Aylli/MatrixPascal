@@ -28,7 +28,7 @@ begin
                     end;
                     if j<=7 then begin
                         gotoxy(lines[i][1], lines[i][2]-j-1); // Перемещаемся на координату отрисовки
-                        write(symbols[random(59)+1]); // Пишем случайный символ
+                        write(symbols[random(69)+1]); // Пишем случайный символ
                     end;
                     if (j=7) and (lines[i][2]>1) then begin
                         gotoxy(lines[i][1], lines[i][2]-j-2); // Перемещаемся на координату где полоски быть не должно
@@ -55,7 +55,7 @@ begin // Ну тип программа
     textbackground(0); // Ставим цвет фона на чёрный
     clrscr; // и заливаем
     // Описываем основные переменные
-    symbols:='qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмитьбюё'; // Буковки
+    symbols:='qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмитьбюё1234567890'; // Буковки
     for i:=1 to lin do begin // Обнуляем строки
         lines[i][1]:=0; // X
         lines[i][2]:=0; // Y
@@ -66,6 +66,6 @@ begin // Ну тип программа
             i:=i+1;
         lines[i][1]:=random(width)+1; // Делаем её занятой
         Draw(); // Рисуем матрицу
-        delay(25); // Задержка. 6FPS.
+        delay(50); // Задержка. 6FPS.
     end;
 end.
