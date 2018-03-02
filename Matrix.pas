@@ -16,12 +16,13 @@ begin
             for j:=1 to 7 do begin // Идём по всей длинне
                 if lines[i][2]>=j then begin // Если Y позволяет отрисовать
                     if (j=1) then begin// Если это первый или второй символ
-//                        textbackground(10); // Фон ярко-зелёный
+                        textbackground(10); // Фон ярко-зелёный
                         textcolor(15); // Цвет текста белый
                     end;
                     if (j=2) or (j=3) or (j=4) then begin
-//                        textbackground(2); // Фон зелёный
-                        textcolor(10); // Цвет текста серый 7 
+                        textbackground(2); // Фон зелёный
+//                        textcolor(10); // Цвет текста ярко-зелёный (Для одного из вариантов оформления)
+                        textcolor(7); // Цвет текста серый 
                     end;
                     if j>=5 then begin
                         textbackground(0); // Фон чёрный
