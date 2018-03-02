@@ -1,6 +1,7 @@
 ﻿program Matrix; // Ну тип заголовок
 uses Crt; // Ну тип графический модуль
-const width = 100;   // Ну тип высота
+const width = 100;   // Ну тип ширина
+      height = 25; // Высота
       lin = 100; // Количество линий
 var lines: array [1..lin, 1..2] of integer; // Ну тип линии
     symbols: string; // Буковки
@@ -15,12 +16,12 @@ begin
             for j:=1 to 7 do begin // Идём по всей длинне
                 if lines[i][2]>=j then begin // Если Y позволяет отрисовать
                     if (j=1) then begin// Если это первый или второй символ
-                        textbackground(10); // Фон ярко-зелёный
+//                        textbackground(10); // Фон ярко-зелёный
                         textcolor(15); // Цвет текста белый
                     end;
                     if (j=2) or (j=3) or (j=4) then begin
-                        textbackground(2); // Фон зелёный
-                        textcolor(7); // Цвет текста серый
+//                        textbackground(2); // Фон зелёный
+                        textcolor(10); // Цвет текста серый 7 
                     end;
                     if j>=5 then begin
                         textbackground(0); // Фон чёрный
@@ -36,7 +37,7 @@ begin
                     end;
                 end;     
             end;
-            if lines[i][2]>=32 then begin // Если Y>=32
+            if lines[i][2]>=height+7 then begin // Если Y>=height+7
                 // Очищаем ненужные пиксели
                 textbackground(0);
                 for j:=1 to 7 do begin
